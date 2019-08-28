@@ -1,0 +1,48 @@
+{
+	"name": "google-search",
+	"displayName": "Google Search Extension",
+	"description": "Search websites from VSCode",
+	"version": "0.0.1",
+	"publisher": "skz0614",
+	"license": "MIT",
+	"repository": "https://github.com/skz-0614/vscode-search",
+	"engines": {
+		"vscode": "^1.37.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "skz-0614.google.search",
+				"title": "Search Websites"
+			}
+		],
+		"menus": {
+			"editor/title": [
+				{
+					"when": "SearchEnabled",
+					"command": "skz-0614.google.search",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/node": "^8.10.25",
+		"tslint": "^5.11.0",
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.35"
+	}
+}
