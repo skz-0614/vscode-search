@@ -2,8 +2,11 @@
 	"name": "google-search",
 	"displayName": "Google Search Extension",
 	"description": "Search websites from VSCode",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "skz0614",
+	"author": {
+		"name":"Skz 0614"
+	},
 	"license": "MIT",
 	"repository": "https://github.com/skz-0614/vscode-search",
 	"engines": {
